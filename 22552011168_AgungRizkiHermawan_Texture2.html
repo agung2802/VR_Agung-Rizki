@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Pertemuan 4</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img src="Gambar/Terracotta_Tiles_002_Base_Color.jpg" id = "base">
+            <img src="Gambar/Terracotta_Tiles_002_Normal.jpg" id = "normal">
+            <img src="Gambar/Terracotta_Tiles_002_Height.png" id = "height">
+        </a-assets>
+        <a-box
+            src ="#base"
+            repeat = "2 2"
+            normal-map = "#normal"
+            segments-height = 100
+            segments-width = 100
+            segments-depth = 100
+            normal-texture-repeat = "2 2"
+            displacement-map = "#height"
+            displacement-bias = 0
+            displacement-scale = 0.2
+            displacement-texture-repeat = "2 2"
+            position = "-1 1.5 -2"
+        ></a-box>
+        <a-sphere
+            src = "#base"
+            position = "1 1.5 -2"
+            radius = 0.5
+            normal-map = "#normal"
+            normal-texture-repeat ="2 2"
+            repeat = "2 2"
+        ></a-sphere>
+    </a-scene>
+</body>
+</html>
